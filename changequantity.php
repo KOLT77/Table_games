@@ -3,7 +3,7 @@ session_start();
 if (isset($_SESSION['login']) && isset($_SESSION['adminmode'])) {
     echo header('Location:index.php');
 } else {
-	$productnumber = '';
+	$changequantity = '';
     for ($i = 0; $i < $_SESSION['basketcounter']; $i++) {
         if  (!empty($_GET['changequantity' . $i] == '-') && $_SESSION['quantity' . $i] > 1) {
             $_SESSION['quantity' . $i]--;

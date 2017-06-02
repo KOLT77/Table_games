@@ -8,12 +8,12 @@ if (isset($_SESSION['login']) && isset($_SESSION['adminmode'])) {
         file_put_contents('files/ordersitems.txt', $_SESSION['item' . $i] . ' (' . $_SESSION['quantity' . $i] . 'шт.) - ' . $_SESSION['price' . $i] * $_SESSION['quantity' . $i] . ' руб. <br>', FILE_APPEND);
     }
     file_put_contents('files/ordersitems.txt', ' Сумма = ' . $sum . ' руб. ' . "\n", FILE_APPEND);
-    $login       = $_SESSION['login'];
-    $fullname    = htmlspecialchars($_GET['fullname']);
-    $phonenumber = htmlspecialchars($_GET['phonenumber']);
-    $email       = htmlspecialchars($_GET['email']);
-    $address     = htmlspecialchars($_GET['address']);
-    $date        = htmlspecialchars($_GET['date']);
+    $login       = !empty($_SESSION['login']) ? $_SESSION['login'] : '';
+    $fullname    = !empty($_GET['fullname'])) ? htmlspecialchars($_GET['fullname'])) : '';
+    $phonenumber = !empty($_GET['phonenumber']) ? htmlspecialchars($_GET['phonenumber'] : '';
+    $email       = !empty($_GET['email']) ? htmlspecialchars($_GET['email']) : '';
+    $address     = !empty($_GET['address']) ? htmlspecialchars($_GET['address']) : '';
+    $date        = !empty($_GET['date']) ? htmlspecialchars($_GET['date']) : '';
     date_default_timezone_set('Etc/GMT-6');
     $orderingdate = date("d.m.y H:i");
     file_put_contents('files/orderslogins.txt', $login . "\n", FILE_APPEND);

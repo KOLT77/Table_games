@@ -85,7 +85,7 @@
                      <p align="center">Название: 
                      <input type="text" size="40" name="productname" required></p>
                      <p align="center">Описание товара: 
-                     <input type="text" size="80" name="productdesc" required></p>
+                     <textarea rows="10" cols="40" name="productdesc"></textarea></p>
                      <p align="center">Цена: 
                      <input type="text" name="productprice" required></p>
                      <p>Картинка (рекоменд. размер - 200x200px):<br>

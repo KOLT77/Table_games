@@ -22,7 +22,7 @@
                      <? 
                         if (isset($_SESSION['login']) && isset($_SESSION['adminmode'])) 
                         {
-                        echo '<div id="str_basket" style="font-size:24px;">
+                        echo '
                         <p><b>Выбрать новость дня:</b>';
                         
                         $daynews=file('files/key_news.txt', FILE_IGNORE_NEW_LINES);
@@ -60,7 +60,6 @@
                         echo header('Location:index.php');
                         }
                         ?>
-                  </div>
                </div>
             </div>
          </div>

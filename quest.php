@@ -17,7 +17,8 @@
                         <p><input type="submit" value="Отправить"></p>
                      </form>
                   </div>
-                  <?	$names=file('files/quest_name.txt', FILE_IGNORE_NEW_LINES);
+                  <?	
+                     $names=file('files/quest_name.txt', FILE_IGNORE_NEW_LINES);
                      $mails=file('files/quest_text.txt', FILE_IGNORE_NEW_LINES);
                      $mails_dates=file('files/quest_date.txt', FILE_IGNORE_NEW_LINES);
                      $mails_times=file('files/quest_time.txt', FILE_IGNORE_NEW_LINES);

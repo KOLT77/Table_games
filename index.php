@@ -10,10 +10,10 @@
                         $bannernames=file('files/bannernames.txt', FILE_IGNORE_NEW_LINES);
                         $bannerimgs=file('files/bannerimgs.txt', FILE_IGNORE_NEW_LINES);
                         $bannersrcs=file('files/bannersrcs.txt', FILE_IGNORE_NEW_LINES);
-                        	for ($i=0; $i<count($bannernames); $i++)
-                        	{
-                        		echo '<a href="',$bannersrcs[$i],'"target="_blank"><img src="banner/',$bannerimgs[$i],'" alt="',$bannernames[$i],'"></a>';
-                        	}
+                        for ($i=0; $i<count($bannernames); $i++)
+                        {
+                        	echo '<a href="',$bannersrcs[$i],'"target="_blank"><img src="banner/',$bannerimgs[$i],'" alt="',$bannernames[$i],'"></a>';
+                        }
                         ?>
                   </div>
                   <?php

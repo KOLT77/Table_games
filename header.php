@@ -24,35 +24,33 @@
    </div>
    <div class="header_info">
       <div class="daynews">
-         <?		
-            $daynews=file('files/daynews.txt', FILE_IGNORE_NEW_LINES);
-            for ($i=0; $i<count($daynews); $i++)
-            		{
-            			echo $daynews[$i];
-            		}
-            
-            		
+         <?
+            $daynews = file('files/daynews.txt', FILE_IGNORE_NEW_LINES);
+            for ($i = 0; $i < count($daynews); $i++) {
+                echo $daynews[$i];
+            }
+
+
             ?>
       </div>
       <div class="reg">
-         <?php if (isset($_SESSION['login']))
-            {
-            
-            	 if (isset($_SESSION['login']) && isset($_SESSION['adminmode'])) 
-            		{
-            			echo '<p>Здравствуйте, ', $_SESSION['login'], '  Роль: администратор <a href="exit.php">Выйти</a>  <a href="cabinet.php">Панель управления</a> </p>';
-            		}
-            		else {
-            			echo '<p>Здравствуйте, ', $_SESSION['login'], '  Роль: пользователь <a href="exit.php">Выйти</a></p>'; 
-            			}
+         <?php
+            if (isset($_SESSION['login'])) {
+
+                if (isset($_SESSION['login']) && isset($_SESSION['adminmode'])) {
+                    echo '<p>Здравствуйте, ', $_SESSION['login'], '  Роль: администратор <a href="exit.php">Выйти</a>  <a href="cabinet.php">Панель управления</a> </p>';
+                } else {
+                    echo '<p>Здравствуйте, ', $_SESSION['login'], '  Роль: пользователь <a href="exit.php">Выйти</a></p>';
+                }
             }
-            
+
             else
-            echo '<p>Авторизация <form method="post" action="login.php">
-            <input type="text" placeholder="Логин" name="login" required>
-            <input type="password" placeholder="Пароль" name="password" required>
-            <input type="submit" value="Войти">
-            </form><a href="registration.php">Зарегистрироваться</a></p>';?>
+                echo '<p>Авторизация <form method="post" action="login.php">
+                        <input type="text" placeholder="Логин" name="login" required>
+                        <input type="password" placeholder="Пароль" name="password" required>
+                        <input type="submit" value="Войти">
+                        </form><a href="registration.php">Зарегистрироваться</a></p>';
+            ?>
       </div>
    </div>
    <div class="clear-both"></div>

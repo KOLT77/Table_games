@@ -59,12 +59,9 @@
                      ';
                      }
                      echo '</form>';
-                     };echo'</div>';}	
-                     
-                     
-                     
-                     
-                     
+                     };echo'</div>';
+                     }	
+                    
                      if (isset($_SESSION['login']) && isset($_SESSION['adminmode'])) 
                      {
                      echo '<div id="addprod">

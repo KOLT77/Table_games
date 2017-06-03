@@ -40,10 +40,10 @@
             
             	 if (isset($_SESSION['login']) && isset($_SESSION['adminmode'])) 
             		{
-            			echo '<p>Здравствуйте, ', $_SESSION['login'], '  Статус: администратор <a href="exit.php">Выйти</a>  <a href="cabinet.php">Управление сайтом </a> </p>';
+            			echo '<p>Здравствуйте, ', $_SESSION['login'], '  Роль: администратор <a href="exit.php">Выйти</a>  <a href="cabinet.php">Панель управления</a> </p>';
             		}
             		else {
-            			echo '<p>Здравствуйте, ', $_SESSION['login'], '  Статус: пользователь <a href="exit.php">Выйти</a></p>'; 
+            			echo '<p>Здравствуйте, ', $_SESSION['login'], '  Роль: пользователь <a href="exit.php">Выйти</a></p>'; 
             			}
             }
             

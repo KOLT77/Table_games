@@ -7,7 +7,7 @@
          {
           if (isset($_SESSION['login']) && isset($_SESSION['adminmode'])) 
          {
-         $orderscount=file('files/ordersitems.txt', FILE_IGNORE_NEW_LINES);
+         $orderscount=file('files/ordersitems8Qi2kd3GD38Smq9Fs2.txt', FILE_IGNORE_NEW_LINES);
          echo '<a href="new_orders.php">  Новые заказы: ', count($orderscount), '</a>
          ';
          }

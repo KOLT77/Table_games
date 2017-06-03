@@ -1,16 +1,4 @@
-<? session_start();
-   if (isset($_SESSION['basketcounter'])==false)
-   {
-   	$_SESSION['basketcounter']=0;
-   }
-   ?>
-<html>
-   <head>
-      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-      <link rel="shortcut icon" href="images/favicon.ico" type="image/ico">
-      <title>ИграНск - Интернет-магазин настольных игр</title>
-      <link rel="stylesheet" type="text/css" href="style.css" />
-   </head>
+<?require 'head.php';?>
    <body>
       <div class="main-block">
          <div class="container paper">
@@ -25,13 +13,13 @@
                      <form action="cleanorders.php" align="right" style="margin:5px;">
                         <input type="submit" value="Очистить заказы" >
                      </form>
-                     <?php $logins=file('files/orderslogins.txt', FILE_IGNORE_NEW_LINES);
-                        $fullnames=file('files/ordersfullnames.txt', FILE_IGNORE_NEW_LINES);
-                        $phonenumbers=file('files/ordersphonenumbers.txt', FILE_IGNORE_NEW_LINES);
-                        $emails=file('files/ordersemails.txt', FILE_IGNORE_NEW_LINES);
-                        $addresses=file('files/ordersaddresses.txt', FILE_IGNORE_NEW_LINES);
-                        $dates=file('files/ordersdates.txt', FILE_IGNORE_NEW_LINES);
-                        $items=file('files/ordersitems.txt', FILE_IGNORE_NEW_LINES);
+                     <?php $logins=file('files/orderslogins8Qi2kd3GD38Smq9Fs2.txt', FILE_IGNORE_NEW_LINES);
+                        $fullnames=file('files/ordersfullnames8Qi2kd3GD38Smq9Fs2.txt', FILE_IGNORE_NEW_LINES);
+                        $phonenumbers=file('files/ordersphonenumbers8Qi2kd3GD38Smq9Fs2.txt', FILE_IGNORE_NEW_LINES);
+                        $emails=file('files/ordersemails8Qi2kd3GD38Smq9Fs2.txt', FILE_IGNORE_NEW_LINES);
+                        $addresses=file('files/ordersaddresses8Qi2kd3GD38Smq9Fs2.txt', FILE_IGNORE_NEW_LINES);
+                        $dates=file('files/ordersdates8Qi2kd3GD38Smq9Fs2.txt', FILE_IGNORE_NEW_LINES);
+                        $items=file('files/ordersitems8Qi2kd3GD38Smq9Fs2.txt', FILE_IGNORE_NEW_LINES);
                         for ($i=0; $i<count($items); $i++)
                         {
                         	echo '

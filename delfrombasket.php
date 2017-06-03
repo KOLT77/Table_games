@@ -2,7 +2,9 @@
 session_start();
 if (isset($_SESSION['login']) && isset($_SESSION['adminmode'])) {
     echo header('Location:index.php');
-} else {
+} 
+else 
+{
     $itemnumber = '';
     for ($i = 0; $i < $_SESSION['basketcounter']; $i++) {
         if (!empty($_GET['item' . $i])) {
@@ -11,7 +13,9 @@ if (isset($_SESSION['login']) && isset($_SESSION['adminmode'])) {
                 $itemnumber = $i;
                 break;
             }
-        } else {
+        } 
+        else 
+        {
             continue;
         }
     }
@@ -26,8 +30,6 @@ if (isset($_SESSION['login']) && isset($_SESSION['adminmode'])) {
         if (!empty($_SESSION['quantity' . $i]) && !empty($_SESSION['quantity' . $next])) {
             $_SESSION['quantity' . $i] = $_SESSION['quantity' . $next];
         }
-        
-        
     }
     $_SESSION['basketcounter']--;
     echo '<script>location.href="', $_SERVER['HTTP_REFERER'], '"</script>';

@@ -192,7 +192,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 	border-radius: 8px;
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bfccca', endColorstr='#bfccca',GradientType=0 );
 	height: auto;
-	margin: 20px auto;
+	margin: 0 0 60 0;
 	padding: 20px;
 }
 #product input
